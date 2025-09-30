@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Interactive Story Telling</title>
+  <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="./images/favicon.jpg">
+</head>
+<body class="scene-default">
+
+  <!-- 🎵 Background Songs -->
+  <audio id="intro-song" src="./songs/intro.mp3" loop></audio>
+  <audio id="love-theme" src="./songs/love.mp3"></audio>
+  <audio id="action-bgm" src="./songs/action.mp3"></audio>
+  <audio id="climax-theme" src="./songs/climx.mp3"></audio>
+  <audio id="victory-theme" src="./songs/victory.mp3"></audio>
+
+  <div class="container">
+    <h1 class="main-title">🎬 Veeran: Vengeance from the Shadows</h1>
+
+    <!-- Story and subtitle -->
+    <div id="story-text">Click below to begin your journey...</div>
+
+    <!-- Subtitles -->
+    <p id="subtitle-box" style="display:none;"></p>
+
+    <!-- Start button -->
+    <button id="start-btn">Start Story ▶</button>
+  </div>
+
+ <!-- End Credits (hidden until movie end) -->
+  <div id="credits">
+    <h1>Thanks For Watching</h1>
+    <div class="credit-row">
+      <img src="./images/hero.jpg" alt="Vijay">
+      <p>Rahul – Aryan Raj</p>
+    </div>
+    <div class="credit-row">
+      <img src="./images/heroine.jpg" alt="Rhea">
+      <p>Meera– Anika Sharma</p>
+    </div>
+    <div class="credit-row">
+      <img src="./images/villain.jpg" alt="Surya Bhan Singh">
+      <p>Surya Bhan Singh – Prakash Raj</p>
+    </div>
+    <div class="credit-row">
+      <img src="./images/comedy-actor.jpg" alt="Chintu">
+      <p>Chintu – Nawaz Style</p>
+    </div>
+    <p>Producer: D.Vignesh Kumar</p>
+    <p>Production: CineVibe Studios</p>
+    <p>Director: D.Naveen Kumar</p>
+  </div>
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>

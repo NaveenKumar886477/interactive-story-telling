@@ -1,0 +1,206 @@
+/* --------------------
+🌌 Global Styles
+--------------------- */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Oxanium', sans-serif;
+  color: #fff;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #0a0a0a, #1e1e1e);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: background-image 1.2s ease-in-out, background 1.2s ease-in-out;
+}
+
+/* 🎭 Scene Backgrounds */
+body.scene-default { background-image: url('./images/bg-default.jpg'); }
+body.scene-romance { background-image: url('./images/bg-romance.jpg'); }
+body.scene-action  { background-image: url('./images/bg-action.jpg'); }
+body.scene-climax  { background-image: url('./images/bg-climax.jpg'); }
+body.scene-success { background-image: url('./images/bg-success.jpg'); }
+
+/* --------------------
+💬 Subtitles
+--------------------- */
+#subtitle-box {
+  margin-top: 15px;
+  font-size: 1.4rem;
+  color: #ffe600;
+  font-weight: bold;
+  font-family: 'Noto Sans Tamil', 'Latha', sans-serif;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+/* --------------------
+🎛 Controls
+--------------------- */
+#controls {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+#controls button {
+  padding: 12px 28px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #ffd700;
+  background: rgba(20,20,20,0.85);
+  border: 2px solid #ffd700;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.35s ease-in-out;
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+}
+
+#controls button:hover {
+  background: #ffd700;
+  color: #000;
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 0 25px #fff200, 0 0 45px rgba(255,215,0,0.6);
+}
+
+/* --------------------
+📦 Container
+--------------------- */
+.container {
+  max-width: 960px;
+  padding: 30px;
+  text-align: center;
+  backdrop-filter: blur(12px) saturate(150%);
+  background: rgba(0, 0, 0, 0.55);
+  border-radius: 20px;
+  box-shadow: 0 0 40px rgba(255, 255, 255, 0.08);
+  animation: fadeInUp 1.4s ease-out;
+}
+
+/* --------------------
+🎬 Main Title
+--------------------- */
+.main-title {
+  font-size: 2.8rem;
+  color: #ffd700;
+  margin-bottom: 25px;
+  letter-spacing: 3px;
+  text-shadow: 0 0 15px #ffdd00, 0 0 35px rgba(255,221,0,0.5);
+  animation: pulse 1.8s infinite alternate;
+}
+
+/* --------------------
+📖 Story Box
+--------------------- */
+#story-text {
+  font-size: 1.5rem;
+  line-height: 1.7;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  padding: 26px;
+  min-height: 140px;
+  margin-bottom: 35px;
+  color: #fff;
+  box-shadow: 0 0 25px rgba(255,255,255,0.1);
+  backdrop-filter: blur(10px);
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+/* --------------------
+🚀 Start Button
+--------------------- */
+#start-btn {
+  margin-top: 20px;
+  padding: 14px 32px;
+  font-size: 1.2rem;
+  background: linear-gradient(135deg, #ffd700, #ffb600);
+  color: #000;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 0 15px #fff200, 0 0 30px rgba(255, 221, 0, 0.6);
+  animation: glow-start 1.8s infinite;
+  transition: all 0.3s ease-in-out;
+}
+
+#start-btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 20px #ffea00, 0 0 50px rgba(255,221,0,0.8);
+}
+
+/* --------------------
+🏆 Credits Section
+--------------------- */
+#credits {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(0,0,0,0.8), #000);
+  color: #fff;
+  padding: 50px 0;
+  text-align: center;
+  font-size: 1.2rem;
+  z-index: 5;
+  animation: scrollCredits 30s linear forwards;
+  overflow-y: auto;
+}
+
+.credit-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 15px auto;
+}
+
+.credit-row img {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  margin-right: 18px;
+  object-fit: cover;
+  box-shadow: 0 0 15px #fff4;
+}
+
+/* --------------------
+📱 Responsive
+--------------------- */
+@media (max-width: 768px) {
+  .main-title { font-size: 2.2rem; }
+  #story-text { font-size: 1.2rem; padding: 18px; }
+  #subtitle-box { font-size: 1rem; }
+  #start-btn { font-size: 1rem; padding: 12px 22px; }
+  .credit-row img { width: 50px; height: 50px; }
+}
+
+/* --------------------
+✨ Animations
+--------------------- */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.04); }
+}
+@keyframes glow-start {
+  0%,100% { box-shadow: 0 0 10px #fff200; }
+  50% { box-shadow: 0 0 25px #ffea00; }
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes scrollCredits {
+  from { transform: translateY(100%); }
+  to { transform: translateY(-100%); }
+}
